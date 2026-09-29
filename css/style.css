@@ -1,0 +1,24 @@
+body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8F4EE; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #A77547; border-radius: 4px; }
+
+/* Supaya judul section tidak tertutup navbar yang fixed */
+section, footer { scroll-margin-top: 120px; }
+#beranda { scroll-margin-top: 0; }
+
+/* Navbar link aktif */
+.nav-link.active { background: #D4A373; color: #3b2712; }
+
+/* Tampilan awal navbar transparan, berubah setelah scroll */
+#navbar.scrolled { padding-top: .5rem; padding-bottom: .5rem; background: rgba(74, 51, 25, .92); backdrop-filter: blur(8px); box-shadow: 0 6px 24px rgba(0,0,0,.25); }
+
+a:focus-visible, button:focus-visible { outline: 3px solid #F4A261; outline-offset: 2px; }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.card-in { animation: fadeUp .35s ease both; }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto !important; }
+    .card-in { animation: none; }
+}
