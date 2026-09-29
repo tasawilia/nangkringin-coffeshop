@@ -39,24 +39,24 @@
 <body class="text-neutral-800 antialiased selection:bg-[#C28E5C] selection:text-white">
 
     <!-- NAVBAR (fixed) -->
-    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-3 sm:px-6 lg:px-8 py-3 sm:py-4 transition-all duration-300">
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 px-5 sm:px-6 lg:px-8 py-4 transition-all duration-300">
         <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
 
             <!-- Logo Brand -->
             <a href="#beranda" class="shrink-0" aria-label="Ke beranda">
                 <div class="flex items-center gap-3">
                     <div
-                        class="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full flex items-center justify-center p-1 shadow-xl bg-[#F4EBE1]/90 backdrop-blur-sm border-2 border-[#D4A373]/30">
+                        class="w-14 h-14 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full flex items-center justify-center p-1 shadow-xl bg-[#F4EBE1]/90 backdrop-blur-sm border-2 border-[#D4A373]/30">
                         <img src="images/logo.png" alt="Nangkringin Logo" class="w-full h-full object-contain rounded-full"
                             onerror="this.src='https://placehold.co/100x100/4a3319/ffffff?text=Logo'">
                     </div>
                 </div>
             </a>
 
-            <nav class="flex items-center gap-1.5 sm:gap-2 bg-[#F4EBE1] rounded-full px-2 sm:px-3 py-2 shadow-xl border border-[#E6D5C3]" aria-label="Navigasi utama">
+            <nav class="flex items-center gap-1 sm:gap-2 bg-[#F4EBE1] rounded-full px-2.5 sm:px-3 py-2 shadow-xl border border-[#E6D5C3]" aria-label="Navigasi utama">
                 <a href="#beranda" data-target="beranda" class="nav-link bg-[#4A3319] hover:bg-[#382613] text-white px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition">Beranda</a>
-                <a href="#menu" data-target="menu" class="nav-link bg-[#4A3319] hover:bg-[#382613] text-white px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition">Menu</a>
                 <a href="#info" data-target="info" class="nav-link bg-[#4A3319] hover:bg-[#382613] text-white px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition">Info</a>
+                <a href="#menu" data-target="menu" class="nav-link bg-[#4A3319] hover:bg-[#382613] text-white px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition">Menu</a>
                 <a href="#" data-wa class="bg-gradient-to-r from-[#D97736] to-[#C05A28] hover:opacity-90 text-white px-3 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition whitespace-nowrap">
                     <i class="fa-brands fa-whatsapp mr-1"></i><span class="hidden sm:inline">Pesan Sekarang</span><span class="sm:hidden">Pesan</span>
                 </a>
@@ -125,6 +125,32 @@
         </div>
     </section>
 
+    <!-- INFO (sebelum menu) -->
+    <section id="info" class="py-16 px-4 sm:px-8 bg-[#F8F4EE]">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#5C4033] mb-2">Info Nangkringin</h2>
+            <p class="text-neutral-600 text-sm sm:text-base mb-8">Kopi, makanan, dan suasana nyaman menanti Anda.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto text-sm text-neutral-700">
+                <div class="bg-[#FDFBF7] rounded-2xl p-5 shadow-md flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-2xl text-[#5C4033]"></i>
+                    <span class="font-semibold">Buah Batu, Bandung</span>
+                </div>
+                <div class="bg-[#FDFBF7] rounded-2xl p-5 shadow-md flex flex-col items-center gap-2">
+                    <i class="fa-solid fa-clock text-2xl text-[#5C4033]"></i>
+                    <span class="font-semibold">Buka Setiap Hari<br>11.00 - 24.00</span>
+                </div>
+                <div class="bg-[#FDFBF7] rounded-2xl p-5 shadow-md flex flex-col items-center gap-2">
+                    <i class="fa-brands fa-instagram text-2xl text-[#5C4033]"></i>
+                    <span class="font-semibold">nangkringin.id</span>
+                </div>
+                <div class="bg-[#FDFBF7] rounded-2xl p-5 shadow-md flex flex-col items-center gap-2">
+                    <i class="fa-brands fa-tiktok text-2xl text-[#5C4033]"></i>
+                    <span class="font-semibold">nangkringin.id</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- MENU -->
     <section id="menu" class="py-16 px-4 sm:px-8 bg-[#B8865B]">
         <div class="max-w-7xl mx-auto">
@@ -138,7 +164,7 @@
                 </div>
 
                 <!-- Tombol kategori -->
-                <div id="catButtons" class="flex gap-2 bg-[#5C4033]/30 p-1.5 rounded-full self-start md:self-auto" role="tablist" aria-label="Kategori menu"></div>
+                <div id="catButtons" class="flex gap-1 sm:gap-2 bg-[#5C4033]/30 p-1.5 rounded-full self-start md:self-auto max-w-full overflow-x-auto" role="tablist" aria-label="Kategori menu"></div>
             </div>
 
             <div id="menuGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 min-h-[200px]"></div>
@@ -148,8 +174,8 @@
         </div>
     </section>
 
-    <!-- INFO (footer) -->
-    <footer id="info" class="bg-[#EFE8DC] py-12 px-4 sm:px-8 border-t border-[#D4A373]/20">
+    <!-- FOOTER -->
+    <footer id="kontak" class="bg-[#EFE8DC] py-12 px-4 sm:px-8 border-t border-[#D4A373]/20">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
 
             <div class="flex flex-col items-center md:items-start text-center md:text-left">
@@ -197,7 +223,8 @@
                 { name: 'Ayam Geprek', price: 22000, img: '' },
                 { name: 'Kentang Goreng', price: 15000, img: '' },
                 { name: 'Sosis Bakar', price: 16000, img: '' },
-                { name: 'Roti Bakar', price: 14000, img: '' }
+                { name: 'Roti Bakar', price: 14000, img: '' },
+                { name: 'Chicken Katsu', price: 24000, img: '' }
             ],
             Minuman: [
                 { name: 'Kopi Susu Nangkring', price: 18000, img: UNS('1461023058943-07fcbe16d735') },
@@ -207,7 +234,8 @@
                 { name: 'Jus Jeruk', price: 15000, img: UNS('1600271886742-f049cd451bba') },
                 { name: 'Matcha Latte', price: 22000, img: '' },
                 { name: 'Coklat Panas', price: 18000, img: '' },
-                { name: 'Lemon Tea', price: 12000, img: '' }
+                { name: 'Lemon Tea', price: 12000, img: '' },
+                { name: 'Cappuccino', price: 20000, img: '' }
             ],
             Dessert: [
                 { name: 'Choco Lava Cake', price: 22000, img: UNS('1578985545062-69928b1d9587') },
@@ -216,9 +244,21 @@
                 { name: 'Es Krim Vanilla', price: 15000, img: UNS('1563805042-7684c019e1cb') },
                 { name: 'Pisang Coklat', price: 14000, img: '' },
                 { name: 'Puding Karamel', price: 13000, img: '' },
-                { name: 'Waffle', price: 19000, img: '' }
+                { name: 'Waffle', price: 19000, img: '' },
+                { name: 'Cheesecake', price: 24000, img: '' }
             ]
         };
+
+        // ====== REKOMENDASI (campuran makanan, minuman, dessert; ambil dari data di atas) ======
+        const pick = (cat, name) => MENU[cat].find(i => i.name === name);
+        MENU.Rekomendasi = [
+            pick('Makanan', 'Nasi Goreng'),
+            pick('Makanan', 'Burger Beef'),
+            pick('Minuman', 'Kopi Susu Nangkring'),
+            pick('Minuman', 'Es Kopi Aren'),
+            pick('Dessert', 'Choco Lava Cake'),
+            pick('Dessert', 'Pancake Madu')
+        ];
 
         // ====== STATE ======
         const state = { cat: 'Makanan', page: 1 };
@@ -232,7 +272,7 @@
             $('#catButtons').innerHTML = Object.keys(MENU).map(c => {
                 const active = c === state.cat;
                 return `<button role="tab" aria-selected="${active}" data-cat="${c}"
-                    class="px-4 sm:px-6 py-2 rounded-full text-sm font-bold transition ${active ? 'bg-[#FDFBF7] text-[#5C4033] shadow' : 'text-white hover:bg-white/15'}">${c}</button>`;
+                    class="px-3 sm:px-6 py-2 rounded-full text-sm font-bold transition whitespace-nowrap ${active ? 'bg-[#FDFBF7] text-[#5C4033] shadow' : 'text-white hover:bg-white/15'}">${c}</button>`;
             }).join('');
         }
 
@@ -313,7 +353,7 @@
         const observer = new IntersectionObserver(entries => {
             entries.forEach(en => { if (en.isIntersecting) setActive(en.target.id); });
         }, { rootMargin: '-45% 0px -50% 0px' });
-        ['beranda', 'menu', 'info'].forEach(id => observer.observe(document.getElementById(id)));
+        ['beranda', 'info', 'menu'].forEach(id => observer.observe(document.getElementById(id)));
 
         render();
     </script>
